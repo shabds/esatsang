@@ -9,7 +9,7 @@ By default, the program runs in 'headless' mode - this means that a browser will
 
 The program has configuration (within the code, for now) to specify start time and end time ranges for morning and evening satsang. It will poll the website during these times and wait until the login is made available. Once the login page is available, it will automatically login (based on given credentials) and attempt to play the live audio stream.
 
-Note that the program can be started at any time in the day - it will not do anything until the specified time windows for morning and evening satsang.
+Note that the program can be started at any time in the day - it will not do anything until the specified time windows for morning and evening satsang. I like to automate the start of the program as well using cron (or Task Scheduler in Windows).
 
 Look for the following lines in the code:
 
@@ -18,7 +18,7 @@ ESATSANG_USERNAME = "" # Provide UID here
 ESATSANG_PASSWORD = "YYYY-MM-DD" # Provide DOB here
 
 MORNING_SATSANG_START_TIME = datetime.time(3, 0, 0)
-MORNING_SATSANG_END_TIME = datetime.time(3, 0, 0)
+MORNING_SATSANG_END_TIME = datetime.time(5, 0, 0)
 
 EVENING_SATSANG_START_TIME = datetime.time(16, 0, 0)
 EVENING_SATSANG_END_TIME = datetime.time(17, 0, 0)
@@ -26,6 +26,7 @@ EVENING_SATSANG_END_TIME = datetime.time(17, 0, 0)
 
 # Pre-requisites
 ## 1. Install Python3
+
 Download and install the latest Python3 version based on your OS from here - https://www.python.org/downloads/
 
 ## 2. Install selenium package for Python3
@@ -36,8 +37,6 @@ Typically, this can be done using the following command:
 
 ## 3. Install Firefox (if not already installed)
 The code currently expects Firefox to already be installed on the system.
-
-# Useful configurations
 
 
 # How to Run
