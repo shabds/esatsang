@@ -41,7 +41,7 @@ The code currently expects Firefox to already be installed on the system.
 
 # How to Run
 
-`python3 play_satsang.py`
+`python play_satsang.py`
 
 The above command will start the process and print out what it's doing on the command line.
 
