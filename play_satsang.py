@@ -3,26 +3,30 @@ from selenium.webdriver.firefox.options import Options
 import time
 import datetime
 
+from configparser import ConfigParser
+config = ConfigParser()
+
 print(str(datetime.datetime.now()) + ': Starting...')
 
+config.read('config.ini')
+
 # Following settings can be customized:
-ESATSANG_USERNAME = "" # Enter UID here
-ESATSANG_PASSWORD = "" # Enter DOB in YYYY-MM-DD format
+ESATSANG_USERNAME = config.get('MAIN', 'ESATSANG_USERNAME')
+ESATSANG_PASSWORD = config.get('MAIN', 'ESATSANG_PASSWORD')
 
-MORNING_SATSANG_START_TIME = datetime.time(3, 0, 0)
-MORNING_SATSANG_END_TIME = datetime.time(5, 0, 0)
+MORNING_SATSANG_START_TIME = datetime.time(config.getint('MAIN', 'MORNING_SATSANG_START_HOUR'), 0, 0)
+MORNING_SATSANG_END_TIME = datetime.time(config.getint('MAIN', 'MORNING_SATSANG_END_HOUR'), 0, 0)
 
-EVENING_SATSANG_START_TIME = datetime.time(16, 0, 0)
-EVENING_SATSANG_END_TIME = datetime.time(17, 0, 0)
+EVENING_SATSANG_START_TIME = datetime.time(config.getint('MAIN', 'EVENING_SATSANG_START_HOUR'), 0, 0)
+EVENING_SATSANG_END_TIME = datetime.time(config.getint('MAIN', 'EVENING_SATSANG_END_HOUR'), 0, 0)
 
-OVERRIDE_TIME_RESTRICTIONS = False
+OVERRIDE_TIME_RESTRICTIONS = config.getboolean('MAIN', 'OVERRIDE_TIME_RESTRICTIONS')
 
 # Define wait time between logins, in minutes
-WAITING_PERIOD = 5
+WAITING_PERIOD = config.getint('MAIN', 'WAITING_PERIOD')
 
 opts = Options()
-opts.headless = True
-assert opts.headless  # Operating in headless mode so no browser is launched
+opts.headless = config.getboolean('MAIN', 'HEADLESS')
 browser = Firefox(executable_path='depends\\geckodriver.exe', options=opts)
 
 
