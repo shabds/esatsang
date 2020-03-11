@@ -6,8 +6,8 @@ import datetime
 print(str(datetime.datetime.now()) + ': Starting...')
 
 # Following settings can be customized:
-ESATSANG_USERNAME = "VSS2008012506557"
-ESATSANG_PASSWORD = "1985-12-17"
+ESATSANG_USERNAME = "" # Enter UID here
+ESATSANG_PASSWORD = "" # Enter DOB in YYYY-MM-DD format
 
 MORNING_SATSANG_START_TIME = datetime.time(3, 0, 0)
 MORNING_SATSANG_END_TIME = datetime.time(5, 0, 0)
