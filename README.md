@@ -3,9 +3,22 @@ Automatically play eSatsang when login opens on the web page
 
 The idea of this program is that it can be started at any time during the day and it will automatically start playing satsang whenever the live stream is made available.
 
-By default, the program runs in 'headless' mode - this means that a browser will not actually be launched (but the audio will still play in the background). However, this can be changed through configuration in the config.ini file.
+# How to Run
 
-`HEADLESS = True`
+## 1. Download the contents of the dist folder
+
+## 2. Make sure your E-satsang login credentials are updated in the config:
+
+```
+ESATSANG_USERNAME = "" # Provide UID here
+ESATSANG_PASSWORD = "YYYY-MM-DD" # Provide DOB here
+```
+
+## 3. Then, simply run the executable
+
+The above command will start the process and print out what it's doing on the command line.
+
+By default, the program runs in 'headless' mode - this means that a browser will not actually be launched (but the audio will still play in the background). However, this can be changed through configuration.
 
 The program has configuration (config.ini) to specify start time and end hour ranges for morning and evening satsang. It will poll the website during these times and wait until the login is made available. Once the login page is available, it will automatically login (based on given credentials) and attempt to play the live audio stream.
 
@@ -38,18 +51,5 @@ HEADLESS=True
 The code currently expects Firefox to already be installed on the system.
 
 
-# How to Run
 
-## 1. Download the contents of the dist folder
-
-## 2. Make sure your E-satsang login credentials are updated in the config:
-
-```
-ESATSANG_USERNAME = "" # Provide UID here
-ESATSANG_PASSWORD = "YYYY-MM-DD" # Provide DOB here
-```
-
-## 3. Then, simply run the executable
-
-The above command will start the process and print out what it's doing on the command line.
 
