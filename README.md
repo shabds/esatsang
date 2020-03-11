@@ -5,16 +5,16 @@ The idea of this program is that it can be started at any time during the day an
 
 # How to Run
 
-## 1. Download the contents of the dist folder
+## 1. Download the file named DOWNLOAD_ME.zip and unpack its contents on your local system
 
-## 2. Make sure your E-satsang login credentials are updated in the config:
+## 2. Make sure your E-satsang login credentials are updated in the config.ini file:
 
 ```
 ESATSANG_USERNAME = "" # Provide UID here
 ESATSANG_PASSWORD = "YYYY-MM-DD" # Provide DOB here
 ```
 
-## 3. Then, simply run the executable
+## 3. Run the executable
 
 The above command will start the process and print out what it's doing on the command line.
 
