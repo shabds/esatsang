@@ -3,12 +3,14 @@ from selenium.webdriver.firefox.options import Options
 import time
 import datetime
 
+print(str(datetime.datetime.now()) + ': Starting...')
+
 # Following settings can be customized:
 ESATSANG_USERNAME = "VSS2008012506557"
 ESATSANG_PASSWORD = "1985-12-17"
 
 MORNING_SATSANG_START_TIME = datetime.time(3, 0, 0)
-MORNING_SATSANG_END_TIME = datetime.time(3, 0, 0)
+MORNING_SATSANG_END_TIME = datetime.time(5, 0, 0)
 
 EVENING_SATSANG_START_TIME = datetime.time(16, 0, 0)
 EVENING_SATSANG_END_TIME = datetime.time(17, 0, 0)
@@ -65,6 +67,5 @@ def play():
         print(str(datetime.datetime.now()) + ": Will check again in {} minutes...".format(WAITING_PERIOD))
         time.sleep(60 * WAITING_PERIOD)
         play()
-
 
 play()
