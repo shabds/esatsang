@@ -14,8 +14,6 @@ Note that the program can be started at any time in the day - it will not do any
 Look for the following lines in the code:
 
 ```
-ESATSANG_USERNAME = "" # Provide UID here
-ESATSANG_PASSWORD = "YYYY-MM-DD" # Provide DOB here
 
 MORNING_SATSANG_START_TIME = datetime.time(3, 0, 0)
 MORNING_SATSANG_END_TIME = datetime.time(5, 0, 0)
@@ -40,6 +38,15 @@ The code currently expects Firefox to already be installed on the system.
 
 
 # How to Run
+
+Make sure your E-satsang login credentials are updated in the play_satsang.py file at the following lines:
+
+```
+ESATSANG_USERNAME = "" # Provide UID here
+ESATSANG_PASSWORD = "YYYY-MM-DD" # Provide DOB here
+```
+
+Then, simply run this from a command prompt (or Terminal):
 
 `python play_satsang.py`
 
