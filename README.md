@@ -52,3 +52,11 @@ Then, simply run this from a command prompt (or Terminal):
 
 The above command will start the process and print out what it's doing on the command line.
 
+# Sample output
+
+```
+c:\esatsang>python play_satsang.py
+2020-03-10 20:59:48.951448: Starting...
+2020-03-10 20:59:51.673140: Doing nothing as current time not within expected range.
+2020-03-10 20:59:51.674137: Will check again in 5 minutes...
+```
